@@ -1,3 +1,6 @@
+Important video: https://www.youtube.com/watch?v=awFLzy0XwXo&t=495s&ab_channel=SoumilShah
+
+
 Build docker image:
 docker build . -f Docker -t smartgpt
 
@@ -19,6 +22,7 @@ DOCKER:
 docker build -t hola-image .
 docker create --name hola-container -it hola-image
 docker start hola-container
+docker exec -it hola-container service supervisor start
 docker exec -it hola-container bash
 python Test.py
 
@@ -26,6 +30,27 @@ python Test.py
 - Crear ubuntu en aws
 - Instalar docker
 - repetir los comandos de arriba
+
+Como actualizar la api key:
+
+- Buscar api-key nueva y pegarla en Test.py
+- subir Test.py a github nuevamente
+- repetir pasos previos
+
+Como Iniciar servicio de aws:
+
+- Iniciar instancia usando Putty, agregando:
+
+IP: ec2-107-23-95-214.compute-1.amazonaws.com 
+puerto: 22
+
+- Ir a Connection, SSH, Auth, Credentials y agregar private key chatgpt_02_15.ppk
+- Click en open 
+- log as: ubuntu
+- Ejecutar:
+docker exec -it hola-container service supervisor start
+docker exec -it hola-container bash
+python Test.py
 
 
 
