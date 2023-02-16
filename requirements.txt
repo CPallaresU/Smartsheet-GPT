@@ -1,0 +1,5 @@
+chatgpt==2.2212.0
+smartsheet-python-sdk==3.0.0
+gunicorn==19.3.0
+pyChatGPT
+PyVirtualDisplay

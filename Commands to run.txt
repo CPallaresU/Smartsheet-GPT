@@ -1,0 +1,37 @@
+Build docker image:
+docker build . -f Docker -t smartgpt
+
+
+create smartsheet_gpt.pem:
+
+https://www.youtube.com/watch?v=awFLzy0XwXo&ab_channel=SoumilShah
+
+
+Run ec2 server:
+
+ssh -i "smartsheet_gpt.pem" ec2-user@ec2-54-208-155-188.compute-1.amazonaws.com
+
+
+----------------
+
+DOCKER:
+
+docker build -t hola-image .
+docker create --name hola-container -it hola-image
+docker start hola-container
+docker exec -it hola-container bash
+python Test.py
+
+- Crear un git del deploy
+- Crear ubuntu en aws
+- Instalar docker
+- repetir los comandos de arriba
+
+
+
+
+
+
+
+
+
